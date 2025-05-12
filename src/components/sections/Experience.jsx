@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../common/SectionHeading';
+import  experiences from '../../data/experience';
 
 const Experience = () => {
   const sectionRef = useRef(null);
@@ -28,22 +29,7 @@ const Experience = () => {
     };
   }, []);
 
-  const experiences = [
-    {
-      title: 'Junior Frontend Developer (Colaboración Backend)',
-      company: 'Lumation Services LLC',
-      period: '2023 - Presente',
-      description:
-        'Colaboración con el equipo de desarrollo para la creación y mantenimiento de aplicaciones web, con enfoque en la mejora de componentes y la optimización de procesos.',
-      achievements: [
-        'Refactorización de componentes en React + TypeScript, mejorando su reutilización y mantenibilidad.',
-        'Reducción de errores en el consumo de APIs mediante la implementación de verificaciones de tipos y manejo de excepciones.',
-        'Mejora en la documentación de código y el manejo de estados complejos en aplicaciones React.',
-        'Colaboración en el desarrollo de APIs RESTful con Node.js y Express.',
-      ],
-      skills: ['React', 'TypeScript', 'Node.js', 'Express', 'API REST'],
-    },
-  ];
+  
 
   return (
     <section id="experience" ref={sectionRef} className="py-16">

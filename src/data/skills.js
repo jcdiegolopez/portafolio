@@ -1,29 +1,25 @@
-const technicalSkills = [
-    "Node.js",
-    "Express.js",
-    "React.js",
-    "Next.js",
-    "Angular",
-    "TypeScript",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "Docker",
-    "AWS",
-    "JWT",
-    "OAuth",
-    "Jest",
-    "Supertest",
-    "Playwright",
-    "Git",
+const mainSkills = [
+    { name: 'Node.js', icon: '/assets/icons/nodejs.svg' },
+    { name: 'Express.js', icon: '/assets/icons/express.svg' },
+    { name: 'React.js', icon: '/assets/icons/react.svg' },
+    { name: 'Next.js', icon: '/assets/icons/nextjs.svg' },
+    { name: 'TypeScript', icon: '/assets/icons/typescript.svg' },
+    { name: 'MySQL', icon: '/assets/icons/mysql.svg' },
+    { name: 'PostgreSQL', icon: '/assets/icons/postgresql.svg' },
+    { name: 'MongoDB', icon: '/assets/icons/mongodb.svg' },
+    { name: 'Docker', icon: '/assets/icons/docker.svg' },
+    { name: 'AWS', icon: '/assets/icons/aws.svg' },
+    { name: 'Git', icon: '/assets/icons/git.svg' },
+    { name: 'Jest', icon: '/assets/icons/jest.svg' },
   ];
   
   const softSkills = [
-    "Trabajo en equipo",
-    "Resolución de problemas",
-    "Comunicación efectiva",
-    "Adaptabilidad",
-    "Gestión del tiempo",
+    'Resolución de problemas',
+    'Comunicación efectiva',
+    'Trabajo en equipo',
+    'Autoaprendizaje',
+    'Adaptabilidad',
+    'Atención al detalle',
   ];
   
   const languages = [
@@ -31,4 +27,4 @@ const technicalSkills = [
     { name: "Inglés", level: "B2" },
   ];
   
-  export { technicalSkills, softSkills, languages };
+  export { mainSkills, softSkills, languages };

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../common/SectionHeading';
 import TechBadge from '../common/TechBadge';
+import { mainSkills, softSkills } from '../../data/skills';
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -30,29 +31,6 @@ const About = () => {
     };
   }, []);
 
-  const mainSkills = [
-    { name: 'Node.js', icon: '/assets/icons/nodejs.svg' },
-    { name: 'Express.js', icon: '/assets/icons/express.svg' },
-    { name: 'React.js', icon: '/assets/icons/react.svg' },
-    { name: 'Next.js', icon: '/assets/icons/nextjs.svg' },
-    { name: 'TypeScript', icon: '/assets/icons/typescript.svg' },
-    { name: 'MySQL', icon: '/assets/icons/mysql.svg' },
-    { name: 'PostgreSQL', icon: '/assets/icons/postgresql.svg' },
-    { name: 'MongoDB', icon: '/assets/icons/mongodb.svg' },
-    { name: 'Docker', icon: '/assets/icons/docker.svg' },
-    { name: 'AWS', icon: '/assets/icons/aws.svg' },
-    { name: 'Git', icon: '/assets/icons/git.svg' },
-    { name: 'Jest', icon: '/assets/icons/jest.svg' },
-  ];
-
-  const softSkills = [
-    'Resolución de problemas',
-    'Comunicación efectiva',
-    'Trabajo en equipo',
-    'Autoaprendizaje',
-    'Adaptabilidad',
-    'Atención al detalle',
-  ];
 
   return (
     <section id="about" ref={sectionRef} className="py-16">
@@ -76,24 +54,21 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-zinc-300">
               <p>
-                Soy un{' '}
-                <span className="text-blue-400">Desarrollador Backend</span>{' '}
-                enfocado en crear soluciones tecnológicas eficientes y escalables.
-                Mi experiencia se centra en el desarrollo de APIs robustas,
-                sistemas de autenticación seguros y arquitecturas orientadas a
-                microservicios.
+                Soy un <span className="text-blue-400">Desarrollador Backend</span> 
+                especializado en crear soluciones eficientes, seguras y escalables. 
+                Me enfoco en el desarrollo de APIs robustas, sistemas de autenticación 
+                y arquitecturas basadas en microservicios.
               </p>
               <p>
-                Actualmente, estoy ampliando mis habilidades hacia el{' '}
-                <span className="text-purple-400">desarrollo frontend</span>,
-                integrando interfaces interactivas con lógica de negocio sólida,
-                lo que me permite tener una visión más integral de los proyectos.
+                Aunque mi enfoque principal es el backend, cuento con experiencia práctica en el 
+                <span className="text-purple-400"> desarrollo frontend</span>, lo que me permite 
+                colaborar de forma integral en equipos full stack y entender a profundidad el ciclo 
+                completo del desarrollo de software.
               </p>
               <p>
-                Mi enfoque técnico y analítico me permite resolver problemas
-                complejos, optimizar procesos y mejorar continuamente la calidad
-                del código. Estoy en constante aprendizaje para mantenerme
-                actualizado con las últimas tecnologías y mejores prácticas.
+                Me caracteriza un pensamiento analítico orientado a resolver problemas complejos, 
+                optimizar procesos y mantener un código limpio y mantenible. 
+                Estoy en constante formación para aplicar las mejores prácticas y tecnologías actuales.
               </p>
             </div>
 

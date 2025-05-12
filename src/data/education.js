@@ -1,35 +1,33 @@
-const educationData = [
+ const education = [
     {
-      institution: "Universidad del Valle de Guatemala (UVG)",
       degree: "Ingeniería en Computación",
-      duration: "2023 - presente",
-      description: "Programa enfocado en algoritmos, estructuras de datos, desarrollo de software, arquitectura de computadoras y sistemas operativos.",
-      achievements: [
-        "Menciones honoríficas por rendimiento académico",
-        "Participación en competencias de programación"
-      ]
+      institution: "Universidad del Valle de Guatemala (UVG)",
+      period: "2023 - presente",
+      description: "Formación en ciencias de la computación, algoritmos, estructuras de datos y desarrollo de software.",
+      achievements: ["Menciones honoríficas por rendimiento académico"]
     }
   ];
+
   
-  const certificationsData = [
+  const certifications = [
     {
       title: "Backend con Node.js y Express",
       issuer: "IBM",
       date: "2024",
-      credentialUrl: "#"
+      image: "/assets/img/ibm_logo.png"
     },
     {
       title: "Docker, Kubernetes & OpenShift",
       issuer: "IBM",
       date: "2025",
-      credentialUrl: "#"
+      image: "/assets/img/ibm_logo.png"
     },
     {
       title: "TypeScript Developer Bootcamp",
       issuer: "LaserAnts",
       date: "2024",
-      credentialUrl: "#"
+      image: "/assets/img/laserants.jpeg"
     }
   ];
   
-  export { educationData, certificationsData };
+  export { education, certifications };

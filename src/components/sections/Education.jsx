@@ -1,40 +1,10 @@
 
 import SectionHeading from '../common/SectionHeading';
 import { motion} from 'motion/react'
+import { education, certifications } from '../../data/education';
 
 const Education = () => {
 
-
-  const education = [
-    {
-      degree: "Ingeniería en Computación",
-      institution: "Universidad del Valle de Guatemala (UVG)",
-      period: "2023 - presente",
-      description: "Formación en ciencias de la computación, algoritmos, estructuras de datos y desarrollo de software.",
-      achievements: ["Menciones honoríficas por rendimiento académico"]
-    }
-  ];
-
-  const certifications = [
-    {
-      title: "Backend con Node.js y Express",
-      issuer: "IBM",
-      date: "2024",
-      image: "/assets/icons/ibm.svg"
-    },
-    {
-      title: "Docker, Kubernetes & OpenShift",
-      issuer: "IBM",
-      date: "2025",
-      image: "/assets/icons/ibm.svg"
-    },
-    {
-      title: "TypeScript Developer Bootcamp",
-      issuer: "LaserAnts",
-      date: "2024",
-      image: "/assets/icons/typescript.svg"
-    }
-  ];
 
   return (
     <section id="education" className="py-16">
@@ -120,7 +90,11 @@ const Education = () => {
                 >
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center flex-shrink-0">
                     {cert.image ? (
-                      <img src={cert.image} alt={cert.issuer} className="w-6 h-6" />
+                      <img
+                        src={cert.image}
+                        alt={cert.issuer}
+                        className="w-full h-full object-cover rounded-full"
+                      />
                     ) : (
                       <div className="text-lg font-bold text-blue-400">{cert.issuer[0]}</div>
                     )}

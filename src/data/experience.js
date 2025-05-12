@@ -1,20 +1,17 @@
-const experienceData = [
-    {
-      company: "Lumation Services LLC",
-      position: "Junior Frontend Developer (Colaboración Backend)",
-      duration: "2023 - Presente",
-      location: "Remoto",
-      description: "Desarrollo de aplicaciones web utilizando React y TypeScript. Refactorización de componentes para mejorar la eficiencia y mantenibilidad. Integración y optimización del consumo de APIs. Documentación técnica y mejora en el manejo de estados de la aplicación.",
-      technologies: ["React", "TypeScript", "Node.js", "Express", "Git", "JIRA"]
-    },
-    {
-      company: "Freelance",
-      position: "Backend Developer",
-      duration: "2022 - 2023",
-      location: "Remoto",
-      description: "Desarrollo de servicios backend para diversas aplicaciones web y móviles. Implementación de arquitecturas escalables y seguras. Diseño y mantenimiento de bases de datos. Creación de APIs RESTful y GraphQL.",
-      technologies: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Docker", "AWS"]
-    }
-  ];
-  
-  export default experienceData;
+const experiences = [
+  {
+    title: 'Junior Frontend Developer (Colaboración Backend)',
+    company: 'Lumation Services LLC',
+    period: 'May 2024 – Presente',
+    description:
+      'Colaboración en proyectos empresariales desarrollando principalmente en frontend, con participación activa en la integración y mejora de APIs, manejo de estados y optimización del flujo de datos.',
+    achievements: [
+      'Refactorización de componentes en React y TypeScript, mejorando su reutilización y reduciendo el tiempo de desarrollo en un 30%.',
+      'Depuración de problemas en el consumo de APIs, reduciendo fallos en el frontend en un 25%.',
+      'Mejora en la documentación de APIs y el manejo de solicitudes, disminuyendo errores de integración en un 40%.',
+      'Propuesta de optimizaciones en la gestión de estados, aumentando la escalabilidad de las aplicaciones.',
+    ],
+    skills: ['React', 'TypeScript', 'Node.js', 'Express', 'API REST'],
+  },
+];
+export default experiences;

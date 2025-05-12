@@ -52,9 +52,7 @@ const Hero = () => {
               <AnimatedText phrases={roles} />
             </div>
             <p className="text-lg text-zinc-400 max-w-xl mb-10">
-              Desarrollador backend especializado en crear soluciones tecnológicas
-              eficientes y escalables, con interés en extender mi experiencia
-              hacia el desarrollo frontend.
+              Desarrollador backend enfocado en construir soluciones escalables y robustas, con experiencia en frontend y amplio dominio del ecosistema full stack.
             </p>
           </motion.div>
 
