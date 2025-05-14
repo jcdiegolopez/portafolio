@@ -59,7 +59,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/assets/cv-diego-lopez.pdf"
+              href="/assets/docs/cv_backend.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium text-sm hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
