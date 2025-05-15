@@ -18,6 +18,16 @@ const projectsData = [
       githubUrl: "https://github.com/jcdiegolopez/evently",
       liveUrl: "https://evently-production-3488.up.railway.app/",
       category: "fullstack"
+    },
+    {
+       id: 3,
+      title: "StatLift - Manejo y estadisticas de datos de gimnasios",
+      description: "Sistema frontend y backend de manejo y estadisticas de datos de gimnasios.",
+      image: "/assets/img/projects/statlift.png",
+      technologies: ["React", "Express", "PostgresSQL","Tailwind", "recharts"],
+      githubUrl: "https://github.com/skemono/Proyecto-3-BD",
+      liveUrl: "https://proyecto-3-bd.onrender.com/",
+      category: "fullstack"
     }
   ];
   
