@@ -28,6 +28,16 @@ const projectsData = [
       githubUrl: "https://github.com/skemono/Proyecto-3-BD",
       liveUrl: "https://proyecto-3-bd.onrender.com/",
       category: "fullstack"
+    },
+    {
+      id: 3,
+      title: "TicketManagment - Manejo de incidentes",
+      description: "Sistema frontend y backend de manejo de incidentes, con estados",
+      image: "/assets/img/projects/ticket.png",
+      technologies: ["JS", "Asp.Net Core", "PostgresSQL","docker"],
+      githubUrl: "https://github.com/jcdiegolopez/TicketApi",
+      liveUrl: "https://ticketapi-1-7yk9.onrender.com/",
+      category: "fullstack"
     }
   ];
   
