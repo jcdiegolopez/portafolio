@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import AnimatedText from '../ui/AnimatedText';
+import AnimatedText from '../ui/AnimatedText'
 import BackgroundEffect from '../ui/BackgroundEffect';
+import { motion } from 'motion/react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
