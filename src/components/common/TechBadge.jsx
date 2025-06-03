@@ -7,7 +7,7 @@ const TechBadge = ({ name, icon: Icon, delay, isVisible }) => {
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="w-5 h-5 flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-md text-zinc-200">
-        {/* Renderizamos el componente de ícono directamente */}
+      
         {Icon ? (
           <Icon className="w-4 h-4 text-zinc-200" />
         ) : (

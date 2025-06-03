@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center py-16 px-4"
+      className="relative min-h-screen flex items-center py-16 px-8 md:px-0"
     >
       <BackgroundEffect />
       <div className="relative z-10 w-full max-w-5xl mx-auto">

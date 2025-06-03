@@ -26,7 +26,6 @@ const Contact = () => {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      // Aquí iría la lógica real de envío del formulario
       setFormStatus({ isSubmitting: false, isSubmitted: true, error: null });
       setFormData({ name: '', email: '', message: '' });
 
@@ -43,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-16 px-8 md:px-0">
       <div className="max-w-5xl mx-auto px-4">
         <SectionHeading
           title="Contacto"

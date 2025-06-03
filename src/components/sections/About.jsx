@@ -33,7 +33,7 @@ const About = () => {
 
 
   return (
-    <section id="about" ref={sectionRef} className="py-16">
+    <section id="about" ref={sectionRef} className="py-16 px-8 md:px-0">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           title="Sobre mí"

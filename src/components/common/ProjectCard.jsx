@@ -11,7 +11,7 @@ const ProjectCard = ({ project, index = 0, isVisible }) => {
       transition={{ duration: 1, delay: index * 0.2 }}
       className="h-full flex flex-col bg-zinc-900/30 rounded-lg border border-zinc-800/50 transition-all duration-500 hover:border-blue-800/50 min-h-[450px]"
     >
-      {/* Image Section */}
+   
       <div className="relative overflow-hidden h-48 sm:h-56 flex-shrink-0 rounded-t-lg">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent z-10"></div>
         <img
@@ -21,13 +21,13 @@ const ProjectCard = ({ project, index = 0, isVisible }) => {
         />
       </div>
 
-      {/* Content Section */}
+ 
       <div className="flex-1 p-6 flex flex-col">
         <h3 className="text-xl font-semibold text-zinc-100 mb-2">{title}</h3>
 
         <p className="text-zinc-400 text-sm mb-4 flex-grow">{description}</p>
 
-        {/* Technologies */}
+      
         <div className="mb-5">
           <div className="flex flex-wrap gap-2">
             {technologies.map((tech, i) => (

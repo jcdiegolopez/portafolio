@@ -42,7 +42,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeTab);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-16">
+    <section id="projects" ref={sectionRef} className="py-16 px-8 md:px-0">
       <div className="max-w-6xl mx-auto">
         <SectionHeading 
           title="Proyectos" 
