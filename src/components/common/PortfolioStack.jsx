@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { User, Briefcase, GraduationCap, Code, Mail, Home } from 'lucide-react';
+import { User, Briefcase, GraduationCap, Code, Mail, Home, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
@@ -76,7 +76,18 @@ const PortfolioStack = () => {
       subtitle: 'Hablemos sobre oportunidades',
       color: 'from-pink-600 to-purple-600',
       component: Contact
+    },
+    {
+      id: 'cv-link',
+      icon: FileText, // Necesitas importar este ícono
+      title: 'Mi CV',
+      subtitle: 'Descargar PDF',
+      color: 'from-green-600 to-teal-600',
+      component: null, // No tiene componente
+      isLink: true,
+      link: '/CV.pdf'
     }
+
   ];
 
 

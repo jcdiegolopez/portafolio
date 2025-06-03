@@ -1,4 +1,3 @@
-// hooks/useClickOutside.js
 import { useEffect } from 'react';
 
 export const useClickOutside = ({
@@ -11,27 +10,23 @@ export const useClickOutside = ({
 }) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Solo cerrar si clicamos fuera del stack Y fuera del contenido de la sección
-      if (stackRef.current && !stackRef.current.contains(event.target)) {
-        // Si hay una sección seleccionada, verificar si el clic fue dentro del contenido
-        if (selectedSection) {
-          const sectionContent = sectionContentRef.current;
-          if (sectionContent && sectionContent.contains(event.target)) {
-            // El clic fue dentro del contenido de la sección, no cerrar
-            return;
-          }
-          // El clic fue fuera del contenido, cerrar la sección
-          setSelectedSection(null);
-        }
-        
-        // Para el stack expandido
-        if (isExpanded) {
-          setIsExpanded(false);
-        }
+      const clickedStack = stackRef?.current?.contains(event.target);
+      const clickedContent = sectionContentRef?.current?.contains(event.target);
+
+      if (!clickedStack && clickedContent && isExpanded) {
+        setIsExpanded(false);
+        return;
+      }
+
+      if (!clickedStack && !clickedContent) {
+        if (selectedSection) setSelectedSection(null);
+        if (isExpanded) setIsExpanded(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isExpanded, selectedSection, stackRef, sectionContentRef, setSelectedSection, setIsExpanded]);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [stackRef, sectionContentRef, selectedSection, isExpanded, setSelectedSection, setIsExpanded]);
 };
