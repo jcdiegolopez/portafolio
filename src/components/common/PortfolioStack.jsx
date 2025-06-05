@@ -35,7 +35,7 @@ const PortfolioStack = () => {
       title: 'Inicio',
       subtitle: 'Diego López - Desarrollador Backend',
       color: 'from-blue-600 to-purple-600',
-      component: Hero
+      component: (props) => <Hero onNavigateToSection={handleSectionClick} {...props} />
     },
     {
       id: 'about',
@@ -139,26 +139,30 @@ const PortfolioStack = () => {
   });
 
   const handleSectionClick = (section, event) => {
-  event.stopPropagation();
-  if (section.isLink) {
-    window.open(section.link, '_blank'); 
-    return;
-  }
-  if (isExpanded) {
-    if (selectedSection?.id === section.id) {
-      setSelectedSection(null);
-    } else {
-      setSelectedSection(null);
-      setTimeout(() => {
-        setSelectedSection(section);
-        setCurrentSectionIndex(sections.findIndex(s => s.id === section.id));
-        setIsExpanded(false);
-      }, 300);
+    try {
+      event.stopPropagation();
+    } catch (error) {
+      console.error('Error stopping event propagation:', error);
     }
-  } else {
-    setIsExpanded(true);
-  }
-};
+    if (section.isLink) {
+      window.open(section.link, '_blank');    
+      return;
+    }
+    if (isExpanded || section.isbutton) {
+      if (selectedSection?.id === section.id) {
+        setSelectedSection(null);
+      } else {
+        setSelectedSection(null);
+        setTimeout(() => {
+          setSelectedSection(section);
+          setCurrentSectionIndex(sections.findIndex(s => s.id === section.id));
+          setIsExpanded(false);
+        }, 300);
+      }
+    } else {
+      setIsExpanded(true);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 overflow-hidden relative">

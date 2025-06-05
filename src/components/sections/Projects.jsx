@@ -1,34 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState,useRef } from 'react';
 import SectionHeading from '../common/SectionHeading';
 import ProjectCard from '../common/ProjectCard';
 import projects from '../../data/projects.js';
 
 const Projects = () => {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
 
   const tabs = [
     { id: 'all', label: 'Todos' },
@@ -51,9 +29,7 @@ const Projects = () => {
         
         {/* Filter Tabs */}
         <div 
-          className={`flex justify-center flex-wrap gap-2 mt-12 mb-8 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
+          className={`flex justify-center flex-wrap gap-2 mt-12 mb-8 transition-all duration-700  'opacity-100 translate-y-0'`}
         >
           {tabs.map((tab) => (
             <button
@@ -77,7 +53,6 @@ const Projects = () => {
               key={index}
               project={project}
               index={index}
-              isVisible={isVisible}
             />
           ))}
         </div>

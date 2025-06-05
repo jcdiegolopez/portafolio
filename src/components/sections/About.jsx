@@ -1,5 +1,5 @@
 
-import { useState, useEffect, useRef } from 'react';
+import {  useRef } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../common/SectionHeading';
 import TechBadge from '../common/TechBadge';
@@ -7,31 +7,7 @@ import { mainSkills, softSkills } from '../../data/skills';
 
 const About = () => {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-
+ 
   return (
     <section id="about" ref={sectionRef} className="py-16 px-8 md:px-0">
       <div className="max-w-5xl mx-auto">
@@ -45,7 +21,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={
-              isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+             { opacity: 1, y: 0 }
             }
             transition={{ duration: 1 }}
           >
@@ -117,7 +93,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={
-              isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+              { opacity: 1, y: 0 } 
             }
             transition={{ duration: 1, delay: 0.4 }}
           >
@@ -132,7 +108,6 @@ const About = () => {
                   name={skill.name}
                   icon={skill.icon}
                   delay={index * 100}
-                  isVisible={isVisible}
                 />
               ))}
             </div>
@@ -142,7 +117,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={
-              isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+             { opacity: 1, y: 0 } 
             }
             transition={{ duration: 1, delay: 0.8 }}
           >

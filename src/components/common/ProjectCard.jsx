@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import TechBadge from './TechBadge';
+import { MdOpenInNew } from 'react-icons/md';
 
-const ProjectCard = ({ project, index = 0, isVisible }) => {
+const ProjectCard = ({ project, index = 0 }) => {
   const { title, description, image, technologies, githubUrl, liveUrl } = project;
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      animate={ { opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: index * 0.2 }}
       className="h-full flex flex-col bg-zinc-900/30 rounded-lg border border-zinc-800/50 transition-all duration-500 hover:border-blue-800/50 min-h-[450px]"
     >
@@ -34,7 +35,6 @@ const ProjectCard = ({ project, index = 0, isVisible }) => {
               <TechBadge
                 key={i}
                 name={tech}
-                isVisible={isVisible}
                 delay={index * 200 + i * 100 + 300}
               />
             ))}
@@ -48,8 +48,8 @@ const ProjectCard = ({ project, index = 0, isVisible }) => {
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center text-sm px-3 py-1 rounded-full bg-blue-900/30 text-blue-300 border border-blue-800/50 transition-all duration-300 hover:bg-blue-800/70 hover:text-blue-100 hover:scale-105 hover:shadow-glow ${
-                isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+              className={`flex items-center text-sm px-3 py-1 rounded-full bg-blue-900/30 text-blue-300 border border-blue-800/50 transition-all duration-300 hover:bg-blue-800/70 hover:text-blue-100 hover:scale-105 hover:shadow-glow 
+                 'opacity-100 scale-100' 
               }`}
               style={{ transitionDelay: `${index * 200 + 500}ms` }}
             >
@@ -69,25 +69,12 @@ const ProjectCard = ({ project, index = 0, isVisible }) => {
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center text-sm px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/50 transition-all duration-300 hover:bg-purple-800/70 hover:text-purple-100 hover:scale-105 hover:shadow-glow ${
-                isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+              className={`flex items-center text-sm px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/50 transition-all duration-300 hover:bg-purple-800/70 hover:text-purple-100 hover:scale-105 hover:shadow-glow 
+                 'opacity-100 scale-100'
               }`}
               style={{ transitionDelay: `${index * 200 + 600}ms` }}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 mr-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-skewness-6L10 14"
-                />
-              </svg>
+              <MdOpenInNew />
               Ver proyecto
             </a>
           )}

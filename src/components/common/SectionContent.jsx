@@ -68,7 +68,7 @@ const SectionContent = forwardRef(({
       </AnimatePresence>
 
       {/* CSS para ocultar scrollbar */}
-      <style jsx>{`
+      <style jsx="true">{`
         .scrollbar-hide {
           -webkit-scrollbar: none;
           scrollbar-width: none;

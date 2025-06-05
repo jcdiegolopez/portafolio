@@ -1,35 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../common/SectionHeading';
 import  experiences from '../../data/experience';
 
 const Experience = () => {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  
+ 
 
   return (
     <section id="experience" ref={sectionRef} className="py-16 px-8 md:px-0">
@@ -53,8 +29,7 @@ const Experience = () => {
               {/* Grupo 1: Encabezado (Título, Empresa, Período) */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
-                animate={
-                  isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+                animate={ { opacity: 1, y: 0 } 
                 }
                 transition={{ duration: 1, delay: index * 0.6 }}
               >
@@ -79,7 +54,7 @@ const Experience = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={
-                  isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+                { opacity: 1, y: 0 }
                 }
                 transition={{ duration: 1, delay: index * 0.6 + 0.4 }}
               >
@@ -117,7 +92,7 @@ const Experience = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={
-                  isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+                 { opacity: 1, y: 0 } 
                 }
                 transition={{ duration: 1, delay: index * 0.6 + 0.8 }}
               >

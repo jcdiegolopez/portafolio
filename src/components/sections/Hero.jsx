@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import AnimatedText from '../ui/AnimatedText'
 import BackgroundEffect from '../ui/BackgroundEffect';
 import { motion } from 'motion/react';
+import Projects from './Projects';
+import Contact from './Contact';  
 
-const Hero = () => {
+const Hero = ({ onNavigateToSection }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,6 +21,11 @@ const Hero = () => {
     'API Architect',
     'Problem Solver',
   ];
+
+  const handleButtonClick = (sectionId, event) => {
+    event.preventDefault();
+    onNavigateToSection(sectionId);
+  };
 
   return (
     <section
@@ -63,8 +70,15 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
+              <button
+                onClick={(e) => handleButtonClick({
+                            id: 'contact',
+                            title: 'Contacto',
+                            subtitle: 'Hablemos sobre oportunidades',
+                            isbutton: true,
+                            color: 'from-pink-600 to-purple-600',
+                            component: Contact
+                          }, e)}
                 className="flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
               >
                 <svg
@@ -82,9 +96,16 @@ const Hero = () => {
                   />
                 </svg>
                 Contáctame
-              </a>
-              <a
-                href="#projects"
+              </button>
+              <button
+                 onClick={(e) => handleButtonClick({
+                              id: 'projects',
+                              title: 'Proyectos',
+                              subtitle: 'Trabajos destacados',
+                              color: 'from-purple-600 to-pink-600',
+                              isbutton: true,
+                              component: Projects
+                            }, e)}
                 className="flex items-center px-6 py-3 rounded-full bg-transparent border border-zinc-700 text-white font-medium hover:bg-zinc-800 transition-all duration-300"
               >
                 <svg
@@ -102,7 +123,7 @@ const Hero = () => {
                   />
                 </svg>
                 Ver Proyectos
-              </a>
+              </button>
             </div>
             <div className="mt-12 flex items-center gap-4">
               <a
