@@ -1,31 +1,71 @@
-# Portafolio
+# Portafolio Personal - React + Vite
 
-Este es mi portafolio personal, desarrollado con JavaScript, CSS y HTML.
+Este es mi portafolio personal desarrollado con **React** y **Vite**, donde muestro mis proyectos, habilidades y experiencia como desarrollador. La interfaz está diseñada para ser moderna, interactiva y responsiva, brindando una navegación fluida y atractiva.
 
-## 🚀 Demo
+🚀 **Deploy en Vercel**: [https://portafolio-six-iota-81.vercel.app](https://portafolio-six-iota-81.vercel.app)
 
-Puedes ver la versión desplegada aquí:  
-[portafolio-six-iota-81.vercel.app](https://portafolio-six-iota-81.vercel.app/)
+## ✨ Características
 
-## 📦 Instalación y uso local
+- ⚛️ Desarrollado con React y Vite para un rendimiento óptimo
+- 💫 Animaciones suaves con [Framer Motion](https://www.framer.com/motion/)
+- 🎨 Estilos con Tailwind CSS
+- 🧩 Sistema de secciones tipo "stack" con lógica de apertura y cierre
+- 🌌 Fondo animado con partículas en canvas
+- 📱 Diseño responsive y adaptable a diferentes dispositivos
+
+## 📂 Estructura del proyecto
+
+```
+
+src/
+├── components/        # Componentes reutilizables
+├── hooks/             # Hooks personalizados (useClickOutside, etc.)
+├── sections/          # Secciones del portafolio (Sobre mí, Proyectos, etc.)
+├── assets/            # Imágenes, íconos, etc.
+├── styles/            # Estilos globales y configuraciones de Tailwind
+├── App.jsx
+├── main.jsx
+
+````
+
+## ⚙️ Instalación local
 
 1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/jcdiegolopez/portafolio.git
-   ```
-2. Entra a la carpeta del proyecto:
-   ```bash
-   cd portafolio
-   ```
-3. Abre el archivo index.html en tu navegador o usa una extensión como Live Server en VSCode para visualizarlo localmente.
 
-## ✨ Tecnologías usadas
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+````
 
-- JavaScript
-- CSS
-- HTML
+2. Instala dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+## 🛠️ Tecnologías usadas
+
+* [React](https://reactjs.org/)
+* [Vite](https://vitejs.dev/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Framer Motion](https://www.framer.com/motion/)
+* [Vercel](https://vercel.com/) para despliegue
+
+## 🌐 Enlace al sitio
+
+👉 [Ver Portafolio en línea](https://portafolio-six-iota-81.vercel.app)
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT. Puedes usar el código como referencia o base para tus propios proyectos.
 
 ---
 
-¡Siéntete libre de explorar y contribuir!
-```
+¡Gracias por visitar mi portafolio! 🚀
+
