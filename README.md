@@ -13,20 +13,6 @@ Este es mi portafolio personal desarrollado con **React** y **Vite**, donde mues
 - 🌌 Fondo animado con partículas en canvas
 - 📱 Diseño responsive y adaptable a diferentes dispositivos
 
-## 📂 Estructura del proyecto
-
-```
-
-src/
-├── components/        # Componentes reutilizables
-├── hooks/             # Hooks personalizados (useClickOutside, etc.)
-├── sections/          # Secciones del portafolio (Sobre mí, Proyectos, etc.)
-├── assets/            # Imágenes, íconos, etc.
-├── styles/            # Estilos globales y configuraciones de Tailwind
-├── App.jsx
-├── main.jsx
-
-````
 
 ## ⚙️ Instalación local
 
@@ -60,10 +46,6 @@ npm run dev
 ## 🌐 Enlace al sitio
 
 👉 [Ver Portafolio en línea](https://portafolio-six-iota-81.vercel.app)
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT. Puedes usar el código como referencia o base para tus propios proyectos.
 
 ---
 
