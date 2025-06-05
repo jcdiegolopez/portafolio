@@ -79,13 +79,13 @@ const PortfolioStack = () => {
     },
     {
       id: 'cv-link',
-      icon: FileText, // Necesitas importar este ícono
+      icon: FileText, 
       title: 'Mi CV',
       subtitle: 'Descargar PDF',
       color: 'from-green-600 to-teal-600',
       component: null, // No tiene componente
       isLink: true,
-      link: '/CV.pdf'
+      link: '/assets/docs/cv_backend.pdf'
     }
 
   ];
@@ -139,22 +139,26 @@ const PortfolioStack = () => {
   });
 
   const handleSectionClick = (section, event) => {
-    event.stopPropagation();
-    if (isExpanded) {
-      if (selectedSection?.id === section.id) {
-        setSelectedSection(null);
-      } else {
-        setSelectedSection(null);
-        setTimeout(() => {
-          setSelectedSection(section);
-          setCurrentSectionIndex(sections.findIndex(s => s.id === section.id));
-          setIsExpanded(false);
-        }, 300);
-      }
+  event.stopPropagation();
+  if (section.isLink) {
+    window.open(section.link, '_blank'); 
+    return;
+  }
+  if (isExpanded) {
+    if (selectedSection?.id === section.id) {
+      setSelectedSection(null);
     } else {
-      setIsExpanded(true);
+      setSelectedSection(null);
+      setTimeout(() => {
+        setSelectedSection(section);
+        setCurrentSectionIndex(sections.findIndex(s => s.id === section.id));
+        setIsExpanded(false);
+      }, 300);
     }
-  };
+  } else {
+    setIsExpanded(true);
+  }
+};
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 overflow-hidden relative">
