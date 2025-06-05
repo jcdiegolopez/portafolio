@@ -1,12 +1,31 @@
-# React + Vite
+# Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portafolio personal, desarrollado con JavaScript, CSS y HTML.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Puedes ver la versión desplegada aquí:  
+[portafolio-six-iota-81.vercel.app](https://portafolio-six-iota-81.vercel.app/)
 
-## Expanding the ESLint configuration
+## 📦 Instalación y uso local
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/jcdiegolopez/portafolio.git
+   ```
+2. Entra a la carpeta del proyecto:
+   ```bash
+   cd portafolio
+   ```
+3. Abre el archivo index.html en tu navegador o usa una extensión como Live Server en VSCode para visualizarlo localmente.
+
+## ✨ Tecnologías usadas
+
+- JavaScript
+- CSS
+- HTML
+
+---
+
+¡Siéntete libre de explorar y contribuir!
+```
