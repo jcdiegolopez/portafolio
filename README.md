@@ -1,12 +1,53 @@
-# React + Vite
+# Portafolio Personal - React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portafolio personal desarrollado con **React** y **Vite**, donde muestro mis proyectos, habilidades y experiencia como desarrollador. La interfaz está diseñada para ser moderna, interactiva y responsiva, brindando una navegación fluida y atractiva.
 
-Currently, two official plugins are available:
+🚀 **Deploy en Vercel**: [https://portafolio-six-iota-81.vercel.app](https://portafolio-six-iota-81.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características
 
-## Expanding the ESLint configuration
+- ⚛️ Desarrollado con React y Vite para un rendimiento óptimo
+- 💫 Animaciones suaves con [Framer Motion](https://www.framer.com/motion/)
+- 🎨 Estilos con Tailwind CSS
+- 🧩 Sistema de secciones tipo "stack" con lógica de apertura y cierre
+- 🌌 Fondo animado con partículas en canvas
+- 📱 Diseño responsive y adaptable a diferentes dispositivos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## ⚙️ Instalación local
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+````
+
+2. Instala dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+## 🛠️ Tecnologías usadas
+
+* [React](https://reactjs.org/)
+* [Vite](https://vitejs.dev/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Framer Motion](https://www.framer.com/motion/)
+* [Vercel](https://vercel.com/) para despliegue
+
+## 🌐 Enlace al sitio
+
+👉 [Ver Portafolio en línea](https://portafolio-six-iota-81.vercel.app)
+
+---
+
+¡Gracias por visitar mi portafolio! 🚀
+
