@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 import SectionHeading from '../common/SectionHeading';
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,13 @@ const Contact = () => {
     setFormStatus({ isSubmitting: true, isSubmitted: false, error: null });
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Envía el correo usando EmailJS
+      await emailjs.sendForm(
+        'service_d6ub2ls',    
+        'template_vkq0nwv',   
+        formRef.current,
+        'fF7vs51OVdc8rl_gI'     
+      );
       setFormStatus({ isSubmitting: false, isSubmitted: true, error: null });
       setFormData({ name: '', email: '', message: '' });
 
